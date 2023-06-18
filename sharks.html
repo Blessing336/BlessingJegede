@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <title>Shark Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+</html>
+
+<body>
+
+    <div id="main">
+
+        <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    
+                    <h1><a href="#">Cleaning and preparing data</a></h1>
+                </header>
+
+                <p><h3>Raw data</h3>
+                    <a href="#" class="image main"><img src="images/dirty shark.jpg" alt="" /></a>
+                    <h3>Formulas used for cleaning</h3></br></br>
+                    <h6>Age band column added</h6>
+                    =IF([@Age]<=12, "Children",IF([@Age]<=19,"Teenagers", IF([@Age]<=50,"Adults", "Elders")))</br></br>
+                    <h6>Body parts injured classification</h6>
+                    =IF(ISNUMBER(SEARCH("thigh",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("toe",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("ankle",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("buttucks",[@Injury])),"Buttucks",IF(ISNUMBER(SEARCH("lower extremities",[@Injury])),"Buttucks",IF(ISNUMBER(SEARCH("foot",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("shin",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("heel",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("calf",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("knee",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("leg",[@Injury])),"Lower_limb",IF(ISNUMBER(SEARCH("forearm",[@Injury])),"Upper_limb",IF(ISNUMBER(SEARCH("arm",[@Injury])),"Upper_limb",IF(ISNUMBER(SEARCH("hand",[@Injury])),"Upper_limb",IF(ISNUMBER(SEARCH("elbow",[@Injury])),"Upper_limb",IF(ISNUMBER(SEARCH("fingers",[@Injury])),"Upper_limb",IF(ISNUMBER(SEARCH("shoulder",[@Injury])),"Upper_limb",IF(ISNUMBER(SEARCH("stomach",[@Injury])),"Trunk",IF(ISNUMBER(SEARCH("No injury",[@Injury])),"No Injury",IF(ISNUMBER(SEARCH("face",[@Injury])),"Head",IF(ISNUMBER(SEARCH("badly",[@Injury])),"Multiple injury",IF(ISNUMBER(SEARCH("fearfully",[@Injury])),"Multiple injury",IF(ISNUMBER(SEARCH("serious",[@Injury])),"Multiple injury",IF(ISNUMBER(SEARCH("mauled",[@Injury])),"Dead",IF(ISNUMBER(SEARCH("fatal",[@Injury])),"Dead","Minor injury")))))))))))))))))))))))))</br></br>
+                   <h6>Time classification</h6>
+                    =IF([@Time]="Unknown", "Unknown", IF([@Time]="Morning", "Morning", IF([@Time]="Dawn", "Dawn", IF([@Time]="Dusk", "Dusk", IF([@Time]="Afternoon", "Afternoon", IF([@Time]="Sunset", "Sunset", IF([@Time]="Night","Night", IF([@Time]="Midnight", "Midnight", IF([@Time]<TIME(12,0,0), "Morning", IF([@Time]<TIME(18,0,0), "Afternoon", "Night"))))))))))</br></br></br>
+                    <h6>Shark specie classification</h6>
+                    =IF(ISNUMBER(SEARCH("brown",[@[Species ]])),"Brown Shark",IF(ISNUMBER(SEARCH("black",[@[Species ]])),"Black Shark",IF(ISNUMBER(SEARCH("blue shark",[@[Species ]])),"Blue Shark",IF(ISNUMBER(SEARCH("dog shark",[@[Species ]])),"Dog",IF(ISNUMBER(SEARCH("little shark",[@[Species ]])),"Little Shark",IF(ISNUMBER(SEARCH("large",[@[Species ]])),"Large Shark",IF(ISNUMBER(SEARCH("grey",[@[Species ]])),"Grey Shark",IF(ISNUMBER(SEARCH("small shark",[@[Species ]])),"Small Shark",IF(ISNUMBER(SEARCH("very large",[@[Species ]])),"Very large",IF(ISNUMBER(SEARCH("young shark",[@[Species ]])),"Young Shark",IF(ISNUMBER(SEARCH("black tipped",[@[Species ]])),"Black Tipped Shark",IF(ISNUMBER(SEARCH("blue nose",[@[Species ]])),"Blue nose Shark",IF(ISNUMBER(SEARCH("blue whaler",[@[Species ]])),"Blue Whaler",IF(ISNUMBER(SEARCH("gummy",[@[Species ]])),"Loxodon Shark",IF(ISNUMBER(SEARCH("juvenile",[@[Species ]])),"Juvenile Shark",IF(ISNUMBER(SEARCH("reef",[@[Species ]])),"Reef Shark",IF(ISNUMBER(SEARCH("sand",[@[Species ]])),"Sand Shark",IF(ISNUMBER(SEARCH("whiptail",[@[Species ]])),"Treasher",IF(ISNUMBER(SEARCH("tintorero",[@[Species ]])),"Tintorero",IF(ISNUMBER(SEARCH("white",[@[Species ]])),"White Shark",IF(ISNUMBER(SEARCH("tiger",[@[Species ]])),"Tiger Shark",IF(ISNUMBER(SEARCH("hammer",[@[Species ]])),"Hammerhead Shark",IF(ISNUMBER(SEARCH("spinner",[@[Species ]])),"Spinner Shark",IF(ISNUMBER(SEARCH("bull",[@[Species ]])),"Bull Shark",IF(ISNUMBER(SEARCH("dusky",[@[Species ]])),"Dusky Shark",IF(ISNUMBER(SEARCH("zambesi",[@[Species ]])),"Zambesi Shark",IF(ISNUMBER(SEARCH("spear0",[@[Species ]])),"Spear-eye Shark",IF(ISNUMBER(SEARCH("copper",[@[Species ]])),"Copper Shark",IF(ISNUMBER(SEARCH("cocktail",[@[Species ]])),"Cocktail Shark",IF(ISNUMBER(SEARCH("carpet",[@[Species ]])),"Carpet Shark",IF(ISNUMBER(SEARCH("albimarginatus",[@[Species ]])),"Albamarginatus",IF(ISNUMBER(SEARCH("banjo",[@[Species ]])),"Banjo Shark",IF(ISNUMBER(SEARCH("silky",[@[Species ]])),"Silky Shark",IF(ISNUMBER(SEARCH("foot",[@[Species ]])),"Foot Shark",IF(ISNUMBER(SEARCH("sevengill",[@[Species ]])),"Sevengill Shark",IF(ISNUMBER(SEARCH("yellow",[@[Species ]])),"Yellowbelly Shark",IF(ISNUMBER(SEARCH("gaffed",[@[Species ]])),"Gaffed",IF(ISNUMBER(SEARCH("cat",[@[Species ]])),"Catshark",IF(ISNUMBER(SEARCH("porbeagle",[@[Species ]])),"Porbeagle",IF(ISNUMBER(SEARCH("hooked",[@[Species ]])),"Hooked Shark",IF(ISNUMBER(SEARCH("ground",[@[Species ]])),"Ground Shark",IF(ISNUMBER(SEARCH("silver",[@[Species ]])),"Silver Shark",IF(ISNUMBER(SEARCH("female",[@[Species ]])),"Female Shark",IF(ISNUMBER(SEARCH("gill",[@[Species ]])),"Gill Shark",IF(ISNUMBER(SEARCH("captive",[@[Species ]])),"Captive Shark",IF(ISNUMBER(SEARCH("cookie",[@[Species ]])),"Cookie cutter",IF(ISNUMBER(SEARCH("cow",[@[Species ]])),"Cowshark",IF(ISNUMBER(SEARCH("bonita",[@[Species ]])),"Bonita Shark",IF(ISNUMBER(SEARCH("bronze",[@[Species ]])),"Bronze Shark",IF(ISNUMBER(SEARCH("galapagos",[@[Species ]])),"Galapagos",IF(ISNUMBER(SEARCH("goblin",[@[Species ]])),"Goblin",IF(ISNUMBER(SEARCH("stingray",[@[Species ]])),"Stingray",IF(ISNUMBER(SEARCH("angel",[@[Species ]])),"Angel Shark",IF(ISNUMBER(SEARCH("lemon",[@[Species ]])),"Lemon",IF(ISNUMBER(SEARCH("leopard",[@[Species ]])),"Leopard",IF(ISNUMBER(SEARCH("mako",[@[Species ]])),"Mako Shark",IF(ISNUMBER(SEARCH("nurse",[@[Species ]])),"Nurse Shark",IF(ISNUMBER(SEARCH("salmon",[@[Species ]])),"Salmon Shark",IF(ISNUMBER(SEARCH("leucas",[@[Species ]])),"C.Leucas",IF(ISNUMBER(SEARCH("macrurus",[@[Species ]])),"C.Macrurus",IF(ISNUMBER(SEARCH("soup",[@[Species ]])),"Soupfin Shark",IF(ISNUMBER(SEARCH("limbatus",[@[Species ]])),"C.Limbatus","Other"))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))</br></br></br>
+               
+               
+                    <h3>Cleaned data</h3>
+                </p>
+                    
+
+                    <p>
+                        <a href="#" class="image main"><img src="images/cleaned shark.jpg" alt="" /></a>
+
+        
+                    </p>
+                    <p><H3>Visualization tool: Tableau</H3</p>
+            
+                <a href="#" class="image main"><img src="images/Shark Analysis.jpg" alt="" /></a>
+                <ul class="actions special">
+            </article>
+       
+    </div>
+</body>
